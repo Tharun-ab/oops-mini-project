@@ -1,0 +1,20 @@
+package model;
+
+import java.time.LocalDate;
+
+public class Plastic extends WasteItem implements RecyclableItem {
+
+    public Plastic(double weight, LocalDate date, String description) {
+        super("Plastic", weight, date, description);
+    }
+
+    @Override
+    public String recyclingTip() {
+        return "Rinse plastic before recycling. Avoid burning.";
+    }
+
+    @Override
+    public String getReuseMethod() {
+        return "Can be reused for DIY containers or storage.";
+    }
+}
